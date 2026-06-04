@@ -7,7 +7,18 @@ const  Query = require('./models/query'); // Query model import karna
 const app = express();
 
 // Middleware
-app.use(cors());
+const cors = require("cors");
+
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173", // Vite
+      "http://localhost:3000", // React
+      "https://india-latin.vercel.app",
+    ],
+    credentials: true,
+  })
+);
 app.use(express.json()); // JSON data parse karne ke liye
 
 
