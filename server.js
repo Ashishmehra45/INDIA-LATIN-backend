@@ -6,8 +6,6 @@ const  Query = require('./models/query'); // Query model import karna
 
 const app = express();
 
-// Middleware
-const cors = require("cors");
 
 app.use(
   cors({
